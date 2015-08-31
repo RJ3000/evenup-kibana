@@ -17,6 +17,8 @@ class kibana::config (
   $default_app_id   = $::kibana::default_app_id,
   $request_timeout  = $::kibana::request_timeout,
   $shard_timeout    = $::kibana::shard_timeout,
+  $ssl_cert_file    = $::kibana::ssl_cert_file,
+  $ssl_key_file     = $::kibana::ssl_key_file,
 ){
 
   file { "${install_path}/kibana/config/kibana.yml":
