@@ -33,7 +33,7 @@ class kibana::config (
 
   if ($ssl_cert != undef) or ($ssl_key != undef)  {
 
-    file { "${install_path}/${ssl_cert}":
+    file { "${install_path}/kibana/${ssl_cert}":
       ensure  => 'file',
       owner   => 'kibana',
       group   => 'root',
@@ -41,7 +41,7 @@ class kibana::config (
       source => "${ssl_cert_file}"
     }
   
-    file { "${install_path}/${ssl_key}":
+    file { "${install_path}/kibana/${ssl_key}":
       ensure  => 'file',
       owner   => 'kibana',
       group   => 'root',
