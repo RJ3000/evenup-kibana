@@ -24,6 +24,8 @@ class kibana::params {
   $group               = 'kibana'
   $verify_ssl          = true
   $user                = 'kibana'
+  $ssl_cert_file       = undef
+  $ssl_key_file        = undef
 
   case $::operatingsystem {
     'RedHat', 'CentOS', 'Fedora', 'Scientific', 'Amazon', 'OracleLinux', 'SLC': {
