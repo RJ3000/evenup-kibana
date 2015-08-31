@@ -92,6 +92,8 @@ class kibana (
   $request_timeout     = $::kibana::params::request_timeout,
   $shard_timeout       = $::kibana::params::shard_timeout,
   $verify_ssl          = $::kibana::params::verify_ssl,
+  $ssl_cert            = $::kibana::params::ssl_cert,
+  $ssl_key             = $::kibana::params::ssl_key,
   $ssl_cert_file       = $::kibana::params::ssl_cert_file,
   $ssl_key_file        = $::kibana::params::ssl_key_file,
 ) inherits kibana::params {
