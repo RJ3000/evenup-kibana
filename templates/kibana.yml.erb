@@ -45,9 +45,11 @@ verify_ssl: <%= @verify_ssl %>
 # the path of the pem file here.
 # ca: /path/to/your/CA.pem
 
-# SSL for outgoing requests from the Kibana Server (PEM formatted)
-# ssl_key_file: /path/to/your/server.key
-# ssl_cert_file: /path/to/your/server.crt
+<%- if @ssl_key_file and @ssl_cert_file -%>
+# SSL for outgoing requests from the Kibana Server (PEM formatted)		 
+ssl_key_file: <%= @ssl_key_file %>
+ssl_cert_file: <%= @ssl_cert_file %>
+<%- end -%>
 
 # Set the path to where you would like the process id file to be created.
 # pid_file: /var/run/kibana.pid
