@@ -60,6 +60,14 @@
 #   Boolean.
 #   Default: true
 #
+# [*ssl_cert_file*]
+#   String. Path to ssl key file (PEM formatted).
+#   Default: undef
+#
+# [*ssl_key_file*]
+#   String. Path to ssl cert file (PEM formatted).
+#   Default: undef
+#
 # === Examples
 #
 # * Installation:
@@ -84,6 +92,8 @@ class kibana (
   $request_timeout     = $::kibana::params::request_timeout,
   $shard_timeout       = $::kibana::params::shard_timeout,
   $verify_ssl          = $::kibana::params::verify_ssl,
+  $ssl_cert_file       = $::kibana::params::ssl_cert_file,
+  $ssl_key_file        = $::kibana::params::ssl_key_file,
 ) inherits kibana::params {
 
   if !is_integer($port) {
