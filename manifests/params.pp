@@ -24,6 +24,8 @@ class kibana::params {
   $group               = 'kibana'
   $verify_ssl          = true
   $user                = 'kibana'
+  $ssl_cert            = undef
+  $ssl_key             = undef
   $ssl_cert_file       = undef
   $ssl_key_file        = undef
 
