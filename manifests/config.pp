@@ -35,7 +35,7 @@ class kibana::config (
 
     file { "${install_path}/kibana/${ssl_cert}":
       ensure  => 'file',
-      owner   => 'kibana',
+      owner   => 'root',
       group   => 'root',
       mode    => '0600',
       source => "${ssl_cert_file}"
@@ -43,7 +43,7 @@ class kibana::config (
   
     file { "${install_path}/kibana/${ssl_key}":
       ensure  => 'file',
-      owner   => 'kibana',
+      owner   => 'root',
       group   => 'root',
       mode    => '0600',
       source => "${ssl_key_file}"
