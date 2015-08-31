@@ -47,8 +47,8 @@ verify_ssl: <%= @verify_ssl %>
 
 <%- if @ssl_key_file and @ssl_cert_file -%>
 # SSL for outgoing requests from the Kibana Server (PEM formatted)		 
-ssl_key_file: <%= @install_path %>/<%= @ssl_key %>
-ssl_cert_file: <%= @install_path %>/<%= @ssl_cert %>
+ssl_key_file: <%= @install_path %>/kibana/<%= @ssl_key %>
+ssl_cert_file: <%= @install_path %>/kibana/<%= @ssl_cert %>
 <%- end -%>
 
 # Set the path to where you would like the process id file to be created.
