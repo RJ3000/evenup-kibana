@@ -46,7 +46,7 @@ verify_ssl: <%= @verify_ssl %>
 # ca: /path/to/your/CA.pem
 
 <%- if @ssl_key_file and @ssl_cert_file -%>
-# SSL for outgoing requests from the Kibana Server (PEM formatted)		 
+# SSL for outgoing requests from the Kibana Server (PEM formatted)
 ssl_key_file: <%= @install_path %>/kibana/<%= @ssl_key %>
 ssl_cert_file: <%= @install_path %>/kibana/<%= @ssl_cert %>
 <%- end -%>
@@ -62,7 +62,9 @@ bundled_plugin_ids:
  - plugins/kibana/index
  - plugins/markdown_vis/index
  - plugins/metric_vis/index
+ <%- if @setting_page -%>
  - plugins/settings/index
+ <%- end -%>
  - plugins/table_vis/index
  - plugins/vis_types/index
  - plugins/visualize/index

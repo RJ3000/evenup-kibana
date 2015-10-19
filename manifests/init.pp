@@ -96,6 +96,7 @@ class kibana (
   $ssl_key             = $::kibana::params::ssl_key,
   $ssl_cert_file       = $::kibana::params::ssl_cert_file,
   $ssl_key_file        = $::kibana::params::ssl_key_file,
+  $setting_page        = false,
 ) inherits kibana::params {
 
   if !is_integer($port) {
